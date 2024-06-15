@@ -1,5 +1,5 @@
 node_modules/
 .env
 *.log
-__pycache__
-.ipynb_checkpoints
+__pycache__/
+.ipynb_checkpoints/
