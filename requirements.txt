@@ -8,3 +8,4 @@ streamlit==1.27.2
 tiktoken==0.5.1
 python-dotenv
 openai<1.0.0
+sentence-transformer
