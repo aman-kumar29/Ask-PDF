@@ -2,12 +2,14 @@ import streamlit as st
 import tiktoken
 import dotenv
 import llm
+import os
 
 
 def run_app():
     # load API keys as global variables
     dotenv.load_dotenv()
-
+    PALM_API_KEY = os.getenv('PALM_API_KEY')
+    print(PALM_API_KEY);
     st.title("My AI app")
 
     st.write("Ask a question to your PDF document")
@@ -33,7 +35,7 @@ def run_app():
 
     # query LLM only when question is submitted
     if question and question != placeholder:
-        result = llm.queryPDF(vectorstore, question)
+        result = llm.queryPDF(vectorstore, question, PALM_API_KEY)
         st.write(result)
 
 

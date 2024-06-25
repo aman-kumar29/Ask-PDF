@@ -16,7 +16,7 @@ def embed_and_store_splits(splits):
     vectorstore = Chroma.from_documents(documents=splits, embedding=HuggingFaceEmbeddings())
     return vectorstore
 
-def queryPDF(vectorstore, query):
+def queryPDF(vectorstore, query,palm_api_key):
     retriever = vectorstore.as_retriever()
     rag_prompt = hub.pull("rlm/rag-prompt")
     llm = GooglePalm(google_api_key=palm_api_key, temperature=0.2)
