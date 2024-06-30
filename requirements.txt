@@ -8,3 +8,4 @@ streamlit
 tiktoken
 python-dotenv
 sentence-transformers
+langchain-community
