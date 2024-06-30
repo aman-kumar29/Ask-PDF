@@ -7,4 +7,4 @@ pypdf
 streamlit
 tiktoken
 python-dotenv
-sentence-transformer
+sentence-transformers
